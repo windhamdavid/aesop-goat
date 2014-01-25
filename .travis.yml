@@ -15,3 +15,8 @@ env:
 branches:
   except:
     - dev
+	
+before_script:
+  - npm install -g grunt-cli
+  
+script: grunt test --verbose
