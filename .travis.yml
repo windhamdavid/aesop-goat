@@ -3,14 +3,7 @@ language: php
 php:
   - 5.3
   - 5.4
-  
-env:
-    - WP_VERSION=master WP_MULTISITE=0
-    - WP_VERSION=3.8.0 WP_MULTISITE=0
-    - WP_VERSION=3.9.0 WP_MULTISITE=0
-    - WP_VERSION=master WP_MULTISITE=1
-    - WP_VERSION=3.8.0 WP_MULTISITE=1
-    - WP_VERSION=3.9.0 WP_MULTISITE=1
+  - 5.5
 
 branches:
   except:
@@ -18,5 +11,6 @@ branches:
 
 before_script:
   - npm install -g grunt-cli
+  - npm install
   
 script: grunt test --verbose
